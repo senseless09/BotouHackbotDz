@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>MELBET // BOTOU HACK BOT DZ</title>
+  <title>MELBET // BOTOU HackBot</title>
   <!-- TailwindCSS CDN -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
@@ -68,7 +68,7 @@
     <div class="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
       <div class="flex items-center gap-3">
         <!-- Logo image -->
-        <img src="assets/logo.png" alt="BotouHack bot Logo" class="h-9 w-auto">
+        <img src="assets/logo.png" alt="Diskarte bot Logo" class="h-9 w-auto">
         <!-- Brand text -->
         <div class="flex flex-col leading-tight">
           <span class="text-indigo-300 font-semibold text-lg">Botou</span>
@@ -77,8 +77,8 @@
       </div>
       <nav class="hidden sm:flex gap-6 text-sm text-gray-400">
         <a href="#id" class="hover:text-gray-200">ID</a>
-        <a href="#connect" class="hover:text-gray-200">Connect</a>
-        <a href="#games" class="hover:text-gray-200">Games</a>
+        <a href="#connect" class="hover:text-gray-200">Connexion</a>
+        <a href="#games" class="hover:text-gray-200">Jeux</a>
       </nav>
     </div>
   </header>
@@ -88,14 +88,14 @@
     <!-- ===================== Screen: ID ===================== -->
     <section id="screen-id" class="screen-enter">
       <div class="card p-6 md:p-8">
-        <h1 class="text-2xl font-semibold mb-2">Connecte ton ID MELBET</h1>
-        <p class="text-slate-400 mb-6">Entre un ID de 10 chiffres qui commence par <b>139</b>.</p>
+        <h1 class="text-2xl font-semibold mb-2">Connectez votre ID MELBET</h1>
+        <p class="text-slate-400 mb-6">Saisissez exactement 10 chiffres commençant par <b>139</b>.</p> 
         <div class="flex flex-col sm:flex-row gap-3">
           <input id="idInput" inputmode="numeric" maxlength="10" placeholder="139XXXXXXX"
                  class="w-full bg-slate-900 text-slate-100 placeholder-slate-500 border border-white/10 rounded-lg px-4 py-3 tracking-widest text-lg outline-none focus:ring-2 focus:ring-emerald-400/40" />
-          <button id="btnConnect" class="btn text-lg sm:w-40" disabled>Connecter</button>
+          <button id="btnConnect" class="btn text-lg sm:w-40" disabled>Connexion</button>
         </div>
-        <p id="idHint" class="text-rose-400 text-sm mt-3 hidden">L’ID لازم يكون فيه 10لازم يكون فيه  chiffres و يبدا بـ 139و يبدا بـ .</p>
+        <p id="idHint" class="text-rose-400 text-sm mt-3 hidden">L’ID doit commencer par 139 et contenir 10 chiffres.</p>
       </div>
     </section>
 
@@ -114,7 +114,7 @@
         <h2 class="text-2xl font-semibold mb-4">Résultat de la vérification</h2>
         <div class="rounded-xl border border-emerald-400/50 bg-emerald-500/10 p-5">
           <p class="mono text-emerald-400 text-xl font-bold mb-1">PROPRE</p>
-          <p class="text-emerald-300">Ton compte est vérifié et prêt.</p>
+          <p class="text-emerald-300">Votre compte est vérifié et prêt ✅</p>
         </div>
         <button id="goToSelect" class="btn mt-6">Continuer</button>
       </div>
@@ -123,6 +123,12 @@
     <!-- ===================== Screen: Game Select ===================== -->
     <section id="screen-select" class="hidden-panel">
       <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Apple Game Card -->
+        <article class="card p-6 flex flex-col">
+          <h3 class="text-xl font-semibold mb-1">Apple of Fortune</h3>
+          <p class="text-slate-400 mb-4">🍎 Grille 10×5, pommes pourries.</p>
+          <button data-open="apple" class="btn mt-auto w-28">Ouvrir</button>
+        </article>
         <!-- Aviator Card -->
         <article class="card p-6 flex flex-col">
           <h3 class="text-xl font-semibold mb-1">Aviator</h3>
@@ -132,13 +138,13 @@
         <!-- Mines Card -->
         <article class="card p-6 flex flex-col">
           <h3 class="text-xl font-semibold mb-1">Mines</h3>
-          <p class="text-slate-400 mb-4"> <span class="mono">💥</span> Tableau 5×5, les mines sont sur</p>
+          <p class="text-slate-400 mb-4"> <span class="mono">💥</span>Grille 5×5, mines marquées.</p>
           <button data-open="mines" class="btn mt-auto w-28">Ouvrir</button>
         </article>
         <!-- Penalty Card -->
         <article class="card p-6 flex flex-col">
           <h3 class="text-xl font-semibold mb-1">Penalty</h3>
-          <p class="text-slate-400 mb-4">But 4×6, l’objectif est <span class="mono">⚽️</span>.</p>
+          <p class="text-slate-400 mb-4">But 4×6, cible marquée.<span class="mono">⚽️</span>.</p>
           <button data-open="penalty" class="btn mt-auto w-28">Ouvrir</button>
         </article>
       </div>
@@ -154,7 +160,7 @@
       <!-- Telegram banner -->
       <div class="center-flex">
         <a href="https://t.me/BotouHack_bot" target="_blank" class="mt-4 inline-flex items-center gap-2 text-sm text-cyan-300 hover:text-cyan-100">
-          Contact bot: <span class="mono">@BotouHack_bot</span>
+          Contacter le bot: <span class="mono">@BotouHack_bot</span>
         </a>
       </div>
     </section>
@@ -163,7 +169,7 @@
     <section id="screen-aviator" class="hidden-panel">
       <div class="card p-6 md:p-8">
         <div class="flex items-center justify-between">
-          <h3 class="text-2xl font-semibold">Aviator — Prédiction</h3>
+          <h3 class="text-2xl font-semibold">Aviator — Prediction</h3>
           <button data-back class="btn-ghost px-4">Retour</button>
         </div>
 
@@ -199,7 +205,7 @@
     <section id="screen-mines" class="hidden-panel">
       <div class="card p-6 md:p-8">
         <div class="flex items-center justify-between">
-          <h3 class="text-2xl font-semibold">Mines — Prédiction</h3>
+          <h3 class="text-2xl font-semibold">Mines — Prediction</h3>
           <button data-back class="btn-ghost px-4">Retour</button>
         </div>
 
@@ -209,7 +215,7 @@
             <!-- 1..10 -->
           </select>
           <button id="minesBtn" class="btn">Prendre prédiction</button>
-          <button id="minesRegen" class="btn-ghost">Relancer</button>
+          <button id="minesRegen" class="btn-ghost">Réessayer</button>
         </div>
 
         <!-- Grid centered -->
@@ -237,13 +243,13 @@
     <section id="screen-penalty" class="hidden-panel">
       <div class="card p-6 md:p-8">
         <div class="flex items-center justify-between">
-          <h3 class="text-2xl font-semibold">Penalty — Prédiction</h3>
+          <h3 class="text-2xl font-semibold">Penalty — Prediction</h3>
           <button data-back class="btn-ghost px-4">Retour</button>
         </div>
 
         <div class="mt-6 flex flex-wrap items-center gap-3">
           <button id="penaltyBtn" class="btn">Prendre prédiction</button>
-          <button id="penaltyRegen" class="btn-ghost">Relancer</button>
+          <button id="penaltyRegen" class="btn-ghost">Réessayer</button>
         </div>
 
         <!-- Goal 4x6 centered -->
@@ -267,6 +273,34 @@
       </div>
     </section>
 
+    <!-- ===================== Screen: Apple ===================== -->
+    <section id="screen-apple" class="hidden-panel">
+      <div class="card p-6 md:p-8">
+        <div class="flex items-center justify-between">
+          <h3 class="text-2xl font-semibold">Apple Game — Prediction</h3>
+          <button data-back class="btn-ghost px-4">Retour</button>
+        </div>
+
+        <div class="mt-6 flex flex-wrap items-center gap-3">
+          <button id="appleBtn" class="btn">Prendre prédiction</button>
+          <button id="appleRegen" class="btn-ghost">Réessayer</button>
+        </div>
+
+    <!-- Grid 10x5 centered -->
+        <div class="mt-6 center-flex">
+          <div id="appleGrid" class="grid grid-cols-5 gap-3"></div>
+        </div>
+
+    <!-- Console -->
+        <div class="card mt-8 p-4">
+          <h4 class="font-semibold mb-2">Console Log</h4>
+          <div class="rounded-xl border border-white/10 bg-black/30 p-3 h-48 overflow-auto">
+            <pre id="logBoxApple" class="mono text-sm whitespace-pre-wrap"></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <script>
@@ -281,6 +315,7 @@
       aviator: $('#screen-aviator'),
       mines: $('#screen-mines'),
       penalty: $('#screen-penalty'),
+      apple: $('#screen-apple'), // ← вот этого не хватало
     };
     function show(name){
       Object.values(screens).forEach(sc => sc.classList.add('hidden-panel'));
@@ -490,8 +525,74 @@
     penaltyBtn.addEventListener('click', runPenalty);
     penaltyRegen.addEventListener('click', runPenalty);
 
-    // Start at ID screen
-    show('id');
+    // ------------------ Apple Game ------------------
+  const grid = document.getElementById("appleGrid");
+  const takeBtn = document.getElementById("appleBtn");
+  const retryBtn = document.getElementById("appleRegen");
+
+  let currentRow = 0; // отслеживаем какой ряд сейчас
+  const totalRows = 10; // всего 10 линий
+  const cols = 5;
+ 
+  // открыть экран Apple
+  $$('[data-open="apple"]').forEach(b=>{
+    b.addEventListener('click', ()=>{ show('apple'); });
+  });
+
+  // Функция создания пустой сетки
+  function initGrid() {
+    grid.innerHTML = "";
+    for (let r = 0; r < totalRows; r++) {
+      for (let c = 0; c < cols; c++) {
+        const cell = document.createElement("div");
+        cell.className = "cell cell-sm text-xl select-none border border-gray-400 flex items-center justify-center";
+        cell.dataset.row = r;
+        cell.dataset.col = c;
+        grid.appendChild(cell);
+      }
+    }
+    currentRow = 0;
+  }
+
+  // Функция генерации ряда с яблоками и черепами
+  function revealRow(row) {
+    const cells = Array.from(grid.querySelectorAll(`[data-row='${row}']`));
+    let rottenCount = 1;
+
+    if (row >= 4 && row <= 6) rottenCount = 2;
+    else if (row >= 7 && row <= 8) rottenCount = 3;
+    else if (row === 9) rottenCount = 4;
+
+    const rottenIndexes = [];
+    while (rottenIndexes.length < rottenCount) {
+      const idx = Math.floor(Math.random() * cols);
+      if (!rottenIndexes.includes(idx)) rottenIndexes.push(idx);
+    }
+
+    cells.forEach((cell, i) => {
+      if (rottenIndexes.includes(i)) {
+        cell.textContent = "💀";
+      } else {
+        cell.textContent = "🍏";
+      }
+    });
+  }
+
+  // Обработчик Take Prediction
+  takeBtn.addEventListener("click", () => {
+    if (currentRow < totalRows) {
+      revealRow(currentRow);
+      currentRow++;
+    }
+  });
+
+  // Обработчик Retry
+  retryBtn.addEventListener("click", () => {
+    initGrid();
+  });
+
+  // Инициализация
+  initGrid();
   </script>
 </body>
 </html>
